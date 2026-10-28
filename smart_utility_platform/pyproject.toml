@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "smart-utility-platform"
+version = "0.2.0"
+description = "Modular utility intelligence prototype with separate frontend, backend, and ML concerns"
+requires-python = ">=3.10,<3.13"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["ml*", "backend*", "frontend*"]
+exclude = ["*.tests*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["ml/tests", "backend/tests"]

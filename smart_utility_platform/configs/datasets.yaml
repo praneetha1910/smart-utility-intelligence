@@ -1,0 +1,25 @@
+data_root: data/raw
+reports_dir: reports
+sample_rows: 5000
+full_scan_default: false
+
+sources:
+  ampds2:
+    directory: ampds2
+    url: https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/FIE0S4
+    timestamp_candidates: [unix_ts, timestamp, TS, datetime, date, time]
+    target_kind: electricity_time_series
+    notes: "Residential one-house data; inspect the chosen power or energy measurement and units before aggregation."
+  electricity_theft:
+    directory: electricity_theft
+    url: https://github.com/henryRDlab/ElectricityTheftDetection
+    label_candidates: [FLAG, label, theft, theft_label, is_theft]
+    id_candidates: [CONS_NO, customer_id, consumer_id, id]
+    target_kind: customer_daily_consumption_classification
+    notes: "Repository documents split archive files data.zip, data.z01 and data.z02; download and extract together."
+  wdseventdb:
+    directory: wdseventdb
+    url: https://github.com/Moazeni-s-Concise-Lab/WDSEventDB
+    label_candidates: [label, event, class, status, target]
+    target_kind: water_distribution_event_detection
+    notes: "Separate leakage, cyberattack, sensor-failure and clean scenarios; do not collapse all events into leakage."

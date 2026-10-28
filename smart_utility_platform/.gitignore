@@ -1,0 +1,26 @@
+# Python environments and caches
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Secrets
+.env
+
+# Raw/processed data and model artifacts are not committed
+# Keep README and .gitkeep markers.
+data/raw/**
+data/processed/**
+!data/raw/**/.gitkeep
+!data/raw/**/README.md
+!data/processed/.gitkeep
+ml/models/*
+!ml/models/.gitkeep
+output/*
+!output/.gitkeep
+
+# Generated pipeline job logs
+reports/pipeline_jobs/*
+!reports/pipeline_jobs/.gitkeep

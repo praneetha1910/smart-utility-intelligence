@@ -1,0 +1,24 @@
+{
+  "data_root": "data/raw",
+  "full_scan_requested": false,
+  "datasets": {
+    "AMPds2": {
+      "root": "data/raw/ampds2",
+      "directory_exists": true,
+      "files_found": 0,
+      "files": []
+    },
+    "Electricity Theft Detection": {
+      "root": "data/raw/electricity_theft",
+      "directory_exists": true,
+      "files_found": 0,
+      "files": []
+    },
+    "WDSEventDB": {
+      "root": "data/raw/wdseventdb",
+      "directory_exists": true,
+      "files_found": 0,
+      "files": []
+    }
+  }
+}
